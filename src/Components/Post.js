@@ -2,7 +2,7 @@ import { ChatBubbleOutline, FavoriteBorderOutlined } from "@mui/icons-material";
 
 function Post({ username, profileImg, likeCount, caption, location }) {
 
-    const truncate =(str) => {
+    const truncate = (str) => {
         return str.length > 80 ? str.substring(0, 80) + "..." : str;
     }
 
@@ -25,7 +25,7 @@ function Post({ username, profileImg, likeCount, caption, location }) {
                         marginRight: '10px'
                     }} />
                     <ChatBubbleOutline className="post__iconsLeft" sx={{
-                        fontSize: 30
+                        fontSize: 30,
                     }} />
                 </div>
                 <div>200,000 likes</div>
