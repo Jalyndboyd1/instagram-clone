@@ -11,7 +11,7 @@
 .post {
   width: 100%;
   max-height: 650px;
-  color: rgb(209, 205, 205);
+  color: #d1cdcd;
   margin-bottom: 25rem;
 }
 
@@ -21,6 +21,8 @@
   justify-content: space-between;
   padding: 10px;
   background-color: #201f1f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .post__topLeft {
@@ -43,10 +45,11 @@
 }
 
 .post__bottom {
-  /* height: 100px; */
   max-height: fit-content;
   background-color: #201f1f;
   padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .post__bottom > div {
@@ -66,11 +69,11 @@
   margin-bottom: 5px !important;
 }
 
-.post__iconsLeft{
+.post__iconsLeft {
   cursor: pointer !important;
   transition: transform 450ms !important;
 }
 
-.post__iconsLeft:hover{
+.post__iconsLeft:hover {
   transform: scale(1.12) !important;
 }
