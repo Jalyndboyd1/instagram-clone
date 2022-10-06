@@ -1,0 +1,48 @@
+/* Stories Component */
+.stories {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  margin: 2rem;
+  width: 50%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: #201f1f;
+  height: 70px;
+}
+
+.stories::-webkit-scrollbar {
+  display: none;
+}
+
+/* Story Component*/
+.story {
+  margin-right: 1.6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fafafa;
+  font-size: small;
+  cursor: pointer;
+}
+
+.story:hover {
+  opacity: 0.8;
+}
+
+.story__image {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  transition: transform 450ms;
+}
+
+.story__image:hover {
+  transform: scale(1.08);
+}
+
+.story__imageActive {
+  border: 3px solid #bc2a8d;
+}
