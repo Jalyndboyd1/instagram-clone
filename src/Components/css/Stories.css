@@ -2,11 +2,11 @@
 .stories {
   display: flex;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   padding-left: 20px;
   margin: 2rem;
-  width: 50%;
+  width: 80%;
   overflow-x: scroll;
   overflow-y: hidden;
   background-color: #201f1f;
