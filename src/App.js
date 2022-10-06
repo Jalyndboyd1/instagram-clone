@@ -1,8 +1,5 @@
 import './App.css';
-import { auth, provider } from "./firebase/app"
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth"
-import { useSelector, useDispatch } from 'react-redux'
-import { login } from "./redux/reducers/counterSlice"
+import { useSelector } from 'react-redux'
 import Container from './Container';
 import Login from './Components/Login';
 

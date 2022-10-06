@@ -1,6 +1,7 @@
 import Nav from './Components/Nav';
 import Stories from "./Components/Stories"
 import Posts from "./Components/Posts"
+import Settings from "./Components/Settings"
 import './App.css';
 
 function Container() {
@@ -13,7 +14,7 @@ function Container() {
                     <Posts />
                 </div>
                 <div className="app__settings">
-                    settings
+                    <Settings />
                 </div>
             </div>
         </div>

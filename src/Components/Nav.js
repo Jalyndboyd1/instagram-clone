@@ -2,8 +2,11 @@ import { Search, HomeOutlined, ChatBubbleOutline, FavoriteBorderOutlined } from 
 import { Avatar } from '@mui/material';
 import logo from "../logo.png"
 import "./css/Nav.css"
+import { useSelector } from 'react-redux'
 
 function Nav() {
+  const user = useSelector((state) => state.user.user)
+
     return (
         <div className='nav'>
             <img src={logo} />
@@ -15,7 +18,7 @@ function Nav() {
                 <HomeOutlined className="nav__rightIcon" />
                 <ChatBubbleOutline className="nav__rightIcon" />
                 <FavoriteBorderOutlined className="nav__rightIcon" />
-                <Avatar />
+                <Avatar src={user.photoURL} alt={user.displayName}/>
             </div>
         </div>
     )

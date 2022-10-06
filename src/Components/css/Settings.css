@@ -1,0 +1,33 @@
+.settings{
+margin-right: 4rem;
+margin-bottom: 8rem;
+
+padding: 20px;
+background:#201f1f;
+color: #c5c1c1;
+height: 320px;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 #C13584;
+transition: 0.3s;
+}
+
+.settings:hover {
+    box-shadow: 0 8px 16px 0 #C13584;
+  }
+
+.settings__info{
+    display: flex;
+    align-items: center;
+}
+
+.settings__name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.settings__name > p {
+    margin-top: -1px;
+    font-size: 10px;
+}
