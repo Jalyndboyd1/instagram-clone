@@ -4,6 +4,7 @@ import logo from "../logo.png"
 import googleLogo from "../google.png"
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import { auth, provider } from "../firebase/app"
+// provider and auth have to be sent to frontend
 import { useSelector, useDispatch } from 'react-redux'
 import { login } from "../redux/reducers/counterSlice"
 

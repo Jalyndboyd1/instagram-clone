@@ -1,6 +1,7 @@
 const dotenv = require('dotenv')
 const { initializeApp } = require("firebase/app");
-const { getAuth } = require("firebase/auth");
+const { getAuth, GoogleAuthProvider } = require("firebase/auth");
+
 
 const envConfig = dotenv.config()
 
@@ -17,7 +18,8 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider()
 
-module.exports = { auth }
+module.exports = { auth, provider }
 
 console.log(envConfig)
