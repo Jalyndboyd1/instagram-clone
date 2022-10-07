@@ -1,11 +1,14 @@
-import { Search, HomeOutlined, ChatBubbleOutline, FavoriteBorderOutlined } from '@mui/icons-material';
+import { Search } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 import logo from "../logo.png"
 import "./css/Nav.css"
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { logout } from '../redux/reducers/counterSlice'
 
 function Nav() {
-  const user = useSelector((state) => state.user.user)
+    const user = useSelector((state) => state.user.user)
+    const dispatch = useDispatch()
 
     return (
         <div className='nav'>
@@ -15,10 +18,12 @@ function Nav() {
                 <input placeholder='Search' />
             </div>
             <div className="nav__right">
-                <HomeOutlined className="nav__rightIcon" />
-                <ChatBubbleOutline className="nav__rightIcon" />
-                <FavoriteBorderOutlined className="nav__rightIcon" />
-                <Avatar src={user.photoURL} alt={user.displayName}/>
+                <LogoutOutlinedIcon sx={{
+                    color: '#fff',
+                    marginRight: 5,
+                    cursor: 'pointer'
+                }} onClick={()=> dispatch(logout())} />
+                <Avatar src={user.photoURL} alt={user.displayName} />
             </div>
         </div>
     )
