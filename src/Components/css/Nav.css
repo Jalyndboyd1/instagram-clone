@@ -9,12 +9,12 @@
 
 .nav > img {
   height: 50px;
-  position: fixed;
+  /* position: fixed; */
   left: 80px;
 }
 
 .nav__search {
-  position: fixed;
+  /* position: fixed; */
   left: 35%;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@
 .nav__right {
   display: flex;
   align-items: center;
-  position: fixed;
+  /* position: fixed; */
   right: 80px;
 }
 

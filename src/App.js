@@ -9,7 +9,7 @@ function App() {
   console.log(user)
   return (
     <div className="app">
-      {user ? <Container/>: <Login/>}
+      {user ? <Container/> : <Login/>}
     </div>
   );
 }
