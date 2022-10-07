@@ -1,17 +1,12 @@
 const app = require('express')()
-const firebase = require('./firebase/config')
-const { auth, provider } = require('./firebase/config')
+const { firebaseConfig } = require('./firebase/config')
 const cors = require('cors')
 
 app.use(cors())
-// Services
-
 // Auth
-app.get('/authData', (req, res) => {
-    res.send({auth: auth, provider: provider})
+app.get('/firebase_config', (req, res) => {
+    res.send(firebaseConfig).status(200)
 })
-// Firestore
-// Storage
 
 app.listen(4000, (err) => {
     console.log(err || 'Running on 4000')

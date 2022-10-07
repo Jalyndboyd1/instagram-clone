@@ -3,18 +3,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth"
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import axios from "../utils/axios"
 
-const firebaseConfig = {
-  apiKey: "AIzaSyACFOblNtEdnO55mmc7uogG_rEEO9rWuNc",
-  authDomain: "instagram-clone-6ceb9.firebaseapp.com",
-  projectId: "instagram-clone-6ceb9",
-  storageBucket: "instagram-clone-6ceb9.appspot.com",
-  messagingSenderId: "617674478858",
-  appId: "1:617674478858:web:1e6d204e6420b557b096f3"
-};
+async function getConfig() {
+  await axios.get('/firebase_config')
+    .then((res) => console.log(res.data))
+}
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(getConfig());
 export const auth = getAuth(app)
 export const db = getFirestore(app)
 export const storage = getStorage(app);
