@@ -6,6 +6,7 @@ import { db, storage } from "../firebase/app"
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import "./css/Settings.css"
 
+
 function Settings() {
     const user = useSelector((state) => state.user.user)
     const [file, setFile] = useState(null)
@@ -18,18 +19,17 @@ function Settings() {
     const handleUpload = () => {
         // Uploads Post information
         const uploadTask = ref(storage, `images/${file.name}`)
-        uploadBytes(uploadTask, file).then((snapshot) => {
-            console.log('Uploaded a blob or file!', snapshot);
-        });
+        uploadBytes(uploadTask, file)
 
         getDownloadURL(ref(storage, `images/${file.name}`))
             .then((url) => {
                 const docRef = addDoc(collection(db, "posts"), {
                     caption: caption,
                     imgURL: url,
-                    likes: 0
+                    likes: 0,
+                    name: user.displayName,
+                    avatar: user.photoURL
                 });
-                console.log("Document written with ID: ", docRef.id);
             })
     }
 

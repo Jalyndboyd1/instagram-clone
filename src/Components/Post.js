@@ -1,6 +1,6 @@
 import { ChatBubbleOutline, FavoriteBorderOutlined } from "@mui/icons-material";
 
-function Post({ username, profileImg, likeCount, caption, location }) {
+function Post({ username, profileImg, caption, image, likes }) {
 
     const truncate = (str) => {
         return str.length > 80 ? str.substring(0, 80) + "..." : str;
@@ -10,13 +10,13 @@ function Post({ username, profileImg, likeCount, caption, location }) {
         <div className="post">
             <div className="post__top">
                 <div class="post__topLeft">
-                    <img src={profileImg} alt="" />
+                    <img src={profileImg} alt={username} />
                     <p>{username}</p>
                 </div>
                 <div class="post__topRight">{/* more horizon icon */}</div>
             </div>
             <div className="post__image">
-                <img src="https://avatars.githubusercontent.com/u/69220994?v=4" />
+                <img src={image} alt='' />
             </div>
             <div className="post__bottom">
                 <div class="post__icons">
@@ -28,7 +28,7 @@ function Post({ username, profileImg, likeCount, caption, location }) {
                         fontSize: 30,
                     }} />
                 </div>
-                <div>200,000 likes</div>
+                <div>{likes} likes</div>
                 <div class="post__caption">
                     <strong>{username}</strong>
                     <p>{truncate(caption)}</p>
